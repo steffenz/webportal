@@ -1,26 +1,63 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, { createGlobalStyle } from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+type Application = {
+  name: string
 }
 
-export default App;
+
+const apps:Application[] = [
+  { name: 'Phone' },
+  { name: 'Groceries'},
+  { name: 'Takout food'},
+  { name: 'Images'},
+  { name: 'Phone' },
+  { name: 'Groceries'},
+  { name: 'Takout food'},
+  { name: 'Images'}
+]
+
+const Global = createGlobalStyle`
+  body {
+    background: #5A5A5A;
+  }
+`
+
+
+const AppIcon = styled.div`
+  width: 128px;
+  height: 128px;
+  background: orange;
+  margin-top:25px;
+  cursor:pointer;
+
+  &:hover {
+    background: pink;
+  }
+`;
+
+const Container = styled.div`
+  width:600px;
+  margin: auto;
+` 
+
+
+const AppGrid = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export default(() => (
+  <React.Fragment>
+    <Global/>
+    <Container>
+      <AppGrid>
+        { apps.map((app, key) => (
+          <AppIcon key={key}/>
+        ))}
+      </AppGrid>
+    </Container>
+  </React.Fragment>
+))
