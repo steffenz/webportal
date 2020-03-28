@@ -6,6 +6,7 @@ export const routeVariants = {
         opacity: 1,
         transition: {
             duration: 0.3,
+            delay: 0.3
         }
     }, 
     exit: {

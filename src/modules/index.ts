@@ -1,7 +1,7 @@
 
 type Modules = {
     name: string
-  }
+}
   
 export const modules:Modules[] = [
   { name: 'Phone' },

@@ -4,6 +4,9 @@ import routes from "./app.routes"
 import AnimatedSwitch from './AnimatedSwitch';
 import { RouteComponentProps } from "react-router-dom";
 
+interface RoutesProps extends RouteComponentProps {
+    component: any
+}
 
 const Routes: React.SFC<RouteComponentProps> = (props) => {
     return (

@@ -1,6 +1,7 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import Routes from './routes/Routes'
+import { BrowserRouter } from "react-router-dom";
 
 const Global = createGlobalStyle`
   body {
@@ -8,17 +9,11 @@ const Global = createGlobalStyle`
   }
 `
 
-const Container = styled.div`
-  width:600px;
-  margin: auto;
-` 
-
-
 export default(() => (
-  <React.Fragment>
-    <Global/>
-    <Container>
-      <Routes />
-    </Container>
-  </React.Fragment>
-))
+  <BrowserRouter>
+    <React.Fragment>
+      <Global/>
+        <Routes />
+    </React.Fragment>
+  </BrowserRouter>
+  ))

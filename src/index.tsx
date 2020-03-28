@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Portal from './portal/Portal';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Portal />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
