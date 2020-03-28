@@ -1,4 +1,4 @@
-import React from "react"; 
+import HomePage from "../modules/HomePage";
 
 type Routes = {
     path: string,
@@ -6,11 +6,9 @@ type Routes = {
     exact?: boolean
 }
 
-const TestRoute = () => <h1>test</h1>
-  
 const routes:Routes[] = [
     {
-        component: TestRoute,
+        component: HomePage,
         path: "/",
     }
 ]

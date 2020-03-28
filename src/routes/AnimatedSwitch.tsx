@@ -36,12 +36,11 @@ const AnimatedSwitch: React.SFC<AnimatedSwitchProps> = ({ location, children, ..
                 animate={"enter"}
                 exit={"exit"}
                 key={location.pathname}
-                custom={reverse}
             >
                 <Switch location={location} {...rest}>
                     {children}
                 </Switch>
-            </ContextRouteAnimation>
+            </AnimatedWrapper>
         </AnimatePresence>
     );
 };
