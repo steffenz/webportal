@@ -1,6 +1,7 @@
 import HomePage from "../modules/HomePage";
 import Clock from "../modules/clock/Clock";
 import { RouteComponentProps } from "react-router-dom";
+import SmallShops from "../modules/small-shops/SmallShops";
 
 type Routes = {
     name: string,
@@ -20,6 +21,11 @@ const routes:Routes[] = [
         name: "Clock",
         component: Clock,
         path: "/clock",
+    },
+    {
+        name: "Shops",
+        component: SmallShops,
+        path: "/shops"
     }
 ]
 
