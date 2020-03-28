@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { modules } from './'
+import { modules } from '.'
 import { RouteComponentProps } from "react-router-dom";
 
 interface HomePageProps extends RouteComponentProps {
