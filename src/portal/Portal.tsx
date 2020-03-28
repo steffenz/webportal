@@ -1,6 +1,7 @@
 import React from "react";
-import Homescreen from "./../components/Homescreen";
 import { createGlobalStyle } from 'styled-components';
+import Routes from '../routes/Routes';
+import { BrowserRouter } from "react-router-dom";
 
 const GlobalStyles = createGlobalStyle`
     *, html, body { margin:0; padding:0; }
@@ -18,7 +19,9 @@ const GlobalStyles = createGlobalStyle`
 
 export default(() => (
     <React.Fragment>
+        <BrowserRouter>
         <GlobalStyles/>
-        <Homescreen/>
+        <Routes/>
+        </BrowserRouter>
     </React.Fragment>
 ))
