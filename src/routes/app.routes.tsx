@@ -1,7 +1,8 @@
 // import HomePage from "../modules/HomePage";
 import Home from "../modules/home/Home";
 import Clock from "../components/clock/Clock";
-import Phone from "../modules/phone/Phone";
+import Phone from "../modules/phone";
+
 import { RouteComponentProps } from "react-router-dom";
 
 type Routes = {
@@ -9,7 +10,7 @@ type Routes = {
     hideFromHomescreen?: boolean,
     path: string,
     component: React.ComponentType<RouteComponentProps<any>>,
-    exact?: boolean
+    exact?: boolean,
 }
 
 const routes:Routes[] = [
@@ -21,10 +22,10 @@ const routes:Routes[] = [
         hideFromHomescreen: true
     }, 
     {
-        name: "Phone",
-        component: Phone,
+        name: Phone.name,
+        component: Phone.component,
         path: "/phone",
     }
 ]
 
-export default routes;
+export default routes;  

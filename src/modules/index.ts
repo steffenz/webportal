@@ -1,14 +1,5 @@
-type Modules = {
-    name: string
+
+export type Module = {
+  name: string,
+  component: any
 }
-  
-export const modules:Modules[] = [
-  { name: 'Phone' },
-  { name: 'Groceries'},
-  { name: 'Takout food'},
-  { name: 'Images'},
-  { name: 'Phone' },
-  { name: 'Groceries'},
-  { name: 'Takout food'},
-  { name: 'Images'}
-]
