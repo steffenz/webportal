@@ -4,6 +4,7 @@ import Clock from "../components/clock/Clock";
 import Phone from "../modules/phone";
 
 import { RouteComponentProps } from "react-router-dom";
+import SmallShops from "../modules/small-shops/SmallShops";
 
 type Routes = {
     name: string,
@@ -22,7 +23,12 @@ const routes:Routes[] = [
         hideFromHomescreen: true
     }, 
     {
-        name: Phone.name,
+        name: "Shops",
+        component: SmallShops,
+        path: "/shops"
+    },
+    {
+        name: "Phone",
         component: Phone.component,
         path: "/phone",
     }
